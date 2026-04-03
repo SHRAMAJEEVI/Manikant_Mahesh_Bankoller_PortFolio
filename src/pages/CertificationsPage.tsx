@@ -17,7 +17,8 @@ import {
   unstopCertificate,
   codebizzCertificate,
   pythonProgrammingCertificate,
-  careerVaultCertificate
+  careerVaultCertificate,
+  nptelCertificate
 } from "../assets";
 
 // Certificate type definition
@@ -144,6 +145,14 @@ const CertificationsPage = () => {
       description: "Achieved certification from CareerVault program, enhancing professional skills and career development capabilities for technical roles.",
       certificateId: "CAREER-2025-001",
       image: careerVaultCertificate,
+    },
+    {
+      title: "Elite NPTEL Certification – Cloud Computing",
+      issuer: "IIT Kharagpur via NPTEL",
+      date: "2025",
+      description: "Successfully completed the Cloud Computing course offered by IIT Kharagpur through NPTEL, earning an Elite Certification with a 76% score and ranking in the Top 5%.",
+      certificateId: "NPTEL-CLOUD-2025-001",
+      image: nptelCertificate,
     },
   ];
 
