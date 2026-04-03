@@ -1,4 +1,3 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { github, preview } from "../assets";
@@ -10,6 +9,12 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 type ProjectCardProps = (typeof PROJECTS)[number] & {
   index: number;
+  name: string;
+  description: string;
+  tags: readonly { name: string; color: string }[];
+  image: string;
+  source_code_link: string;
+  live_site_link: string;
 };
 
 // Project Card
@@ -23,15 +28,8 @@ const ProjectCard = ({
   live_site_link,
 }: ProjectCardProps) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-    <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div className="relative w-full h-[230px]">
+    <div className="w-full max-w-[360px] h-[460px] green-pink-gradient p-[1px] rounded-[20px] shadow-card overflow-hidden">
+      <div className="relative w-full h-[200px]">
         {/* Work image */}
         <img
           src={image}
@@ -39,8 +37,19 @@ const ProjectCard = ({
           className="w-full h-full object-cover rounded-2xl"
         />
 
-        {/* Live Site */}
-        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+        {/* GitHub and Live Demo Buttons - Top Right */}
+        <div className="absolute top-4 right-4 flex gap-2">
+          <div
+            onClick={() => window.open(source_code_link, "_blank", "noreferrer")}
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+          >
+            <img
+              src={github}
+              alt="Github"
+              title="Github"
+              className="w-4 h-4 object-contain"
+            />
+          </div>
           <div
             onClick={() => window.open(live_site_link, "_blank", "noreferrer")}
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -49,42 +58,31 @@ const ProjectCard = ({
               src={preview}
               alt="Live Site"
               title="Live Site"
-              className="w-2/3 h-2/3 object-contain"
-            />
-          </div>
-
-          {/* Github */}
-          <div
-            onClick={() =>
-              window.open(source_code_link, "_blank", "noreferrer")
-            }
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ml-2"
-          >
-            <img
-              src={github}
-              alt="Github"
-              title="Github"
-              className="w-1/2 h-1/2 object-contain"
+              className="w-4 h-4 object-contain"
             />
           </div>
         </div>
-      </div>
 
-      {/* Work Info */}
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
-      </div>
-
-      {/* Work Tag */}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag, tagIdx) => (
-          <p key={`Tag-${tagIdx}`} className={cn(tag.color, "text-[14px]")}>
-            {tag.name}
+        {/* Work Info */}
+        <div className="mt-4">
+          <h3 className="text-white font-bold text-[20px]">{name}</h3>
+          <p className="mt-2 text-white text-[14px] line-clamp-3 leading-6">
+            {description}
           </p>
-        ))}
+        </div>
+
+        {/* Work Tag */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag, tagIdx) => (
+            <p key={`Tag-${tagIdx}`} className={cn(tag.color, "text-[14px]")}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
       </div>
-    </Tilt>
+
+      {/* Removed GitHub + Live Demo Buttons */}
+    </div>
   </motion.div>
 );
 
