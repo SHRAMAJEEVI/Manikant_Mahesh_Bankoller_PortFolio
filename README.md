@@ -53,7 +53,9 @@ Here is the folder structure of this app.
       |--- canvas/
       |--- about.tsx
       |--- banner.tsx
+      |--- certifications.tsx
       |--- contact.tsx
+      |--- education.tsx
       |--- experience.tsx
       |--- feedbacks.tsx
       |--- footer.tsx
@@ -61,6 +63,7 @@ Here is the folder structure of this app.
       |--- index.ts
       |--- loader.tsx
       |--- navbar.tsx
+      |--- simple-contact.tsx
       |--- tech.tsx
       |--- works.tsx
     |-- constants/
@@ -68,6 +71,8 @@ Here is the folder structure of this app.
     |-- hoc/
       |--- index.ts
       |--- section-wrapper.tsx
+    |-- pages/
+      |--- CertificationsPage.tsx
     |-- utils/
       |--- lib.ts
       |--- motion.ts
@@ -82,6 +87,7 @@ Here is the folder structure of this app.
   |- bun.lock
   |- index.html
   |- netlify.toml
+  |- package-lock.json
   |- package.json
   |- postcss.config.cjs
   |- tailwind.config.ts
@@ -174,6 +180,10 @@ Useful resources and dependencies that are used in 3D Portfolio.
 
 <!--- DEPENDENCIES_START --->
 - [@emailjs/browser](https://www.npmjs.com/package/@emailjs/browser): ^4.4.1
+- [@fortawesome/fontawesome-svg-core](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core): ^7.2.0
+- [@fortawesome/free-brands-svg-icons](https://www.npmjs.com/package/@fortawesome/free-brands-svg-icons): ^7.2.0
+- [@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons): ^7.2.0
+- [@fortawesome/react-fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome): ^3.3.0
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.5.0
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
@@ -188,6 +198,7 @@ Useful resources and dependencies that are used in 3D Portfolio.
 - [postcss](https://www.npmjs.com/package/postcss): ^8.5.8
 - [react](https://www.npmjs.com/package/react): ^19.2.4
 - [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
+- [react-icons](https://www.npmjs.com/package/react-icons): ^5.6.0
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom): ^7.13.2
 - [react-tilt](https://www.npmjs.com/package/react-tilt): ^1.0.2
 - [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component): ^4.0.0
