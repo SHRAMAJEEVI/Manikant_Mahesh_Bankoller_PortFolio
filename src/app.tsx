@@ -26,13 +26,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={
             <>
-              {/* Hero Section - No Asteroids Background */}
               <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                 <Navbar hide={hide} />
                 <Hero />
               </div>
-              
-              {/* All Other Sections - With Asteroids Background */}
               <AsteroidsBackground>
                 <About />
                 <Experience />

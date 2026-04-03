@@ -1,3 +1,4 @@
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { github, preview } from "../assets";
@@ -22,7 +23,12 @@ const ProjectCard = ({
   live_site_link,
 }: ProjectCardProps) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-    <div
+    <Tilt
+      options={{
+        max: 45,
+        scale: 1,
+        speed: 450,
+      }}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div className="relative w-full h-[230px]">
@@ -74,11 +80,11 @@ const ProjectCard = ({
       <div className="mt-4 flex flex-wrap gap-2">
         {tags.map((tag, tagIdx) => (
           <p key={`Tag-${tagIdx}`} className={cn(tag.color, "text-[14px]")}>
-            #{tag.name}
+            {tag.name}
           </p>
         ))}
       </div>
-    </div>
+    </Tilt>
   </motion.div>
 );
 

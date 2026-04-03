@@ -7,6 +7,7 @@ import {
   ComputersCanvas,
   EarthCanvas,
   StarsCanvas,
+  AsteroidsCanvas,
 } from "./canvas";
 import { Contact } from "./contact";
 import { SimpleContact } from "./simple-contact";

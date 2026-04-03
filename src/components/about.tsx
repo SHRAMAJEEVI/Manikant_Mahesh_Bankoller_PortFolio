@@ -1,3 +1,4 @@
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { SERVICES } from "../constants";
@@ -14,7 +15,12 @@ type ServiceCardProps = {
 // Service Card
 const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
   return (
-    <div
+    <Tilt
+      options={{
+        max: 45,
+        scale: 1,
+        speed: 450,
+      }}
       className="xs:w-[250px] w-full"
     >
       <motion.div
@@ -28,7 +34,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
           </h3>
         </div>
       </motion.div>
-    </div>
+    </Tilt>
   );
 };
 
