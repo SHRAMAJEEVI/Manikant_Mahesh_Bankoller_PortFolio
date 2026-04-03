@@ -49,16 +49,7 @@ const Banner = ({ hide, setHide }: BannerProps) => {
             <span className="sr-only">Light bulb</span>
           </span>
           <span>
-            Did you enjoy this portfolio? Take a look at my{" "}
-            <Link
-              to="https://www.sanidhyy.name"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline font-medium text-blue-600 underline underline-offset-2 decoration-600 hover:no-underline"
-            >
-              new portfolio
-            </Link>
-            .
+            Welcome to my portfolio! Feel free to explore my projects and get in touch.
           </span>
         </p>
       </div>

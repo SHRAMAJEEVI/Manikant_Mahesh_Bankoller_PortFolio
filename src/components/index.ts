@@ -9,8 +9,9 @@ import {
   StarsCanvas,
 } from "./canvas";
 import { Contact } from "./contact";
+import { SimpleContact } from "./simple-contact";
+import { Education } from "./education";
 import { Experience } from "./experience";
-import { Feedbacks } from "./feedbacks";
 import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { Tech } from "./tech";
@@ -22,10 +23,11 @@ export {
   ComputersCanvas,
   Contact,
   EarthCanvas,
+  Education,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
+  SimpleContact,
   StarsCanvas,
   Tech,
   Works,

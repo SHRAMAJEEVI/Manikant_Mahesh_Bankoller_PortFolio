@@ -2,40 +2,42 @@
 // ! Don't remove anything from here if not sure
 
 import {
+  FaGithub,
+  FaLinkedin,
+  FaJava,
+  FaPython,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiDjango,
+  SiMysql,
+  SiLeetcode,
+  SiHackerrank,
+  SiC,
+} from "react-icons/si";
+
+import {
   mobile,
   backend,
   creator,
   web,
-  javascript,
-  typescript,
+  project1,
+  projectImage,
   html,
   css,
+  javascript,
+  java,
+  python,
+  django,
   reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  threejs,
-  project1,
-  project2,
-  project3,
-  project4,
-  project5,
-  project6,
-  user1,
-  user2,
-  user3,
+  mysql,
+  c,
   youtube,
-  linkedin,
-  twitter,
-  github,
 } from "../assets";
 
 // Navbar Links
@@ -56,327 +58,129 @@ export const NAV_LINKS = [
     link: null,
   },
   {
+    id: "certifications",
+    title: "Certifications",
+    link: "/certifications",
+  },
+  {
     id: "source-code",
     title: "Source Code",
-    link: "http://www.github.com/sanidhyy/3d-portfolio",
+    link: "http://www.github.com/SHRAMAJEEVI/3d-portfolio",
   },
 ] as const;
 
 // Services
 export const SERVICES = [
   {
-    title: "Web Developer",
+    title: "Full stack Developer",
     icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ] as const;
 
 // Technologies
 export const TECHNOLOGIES = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "HTML", icon: html },
+  { name: "CSS", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "Java", icon: java },
+  { name: "Python", icon: python },
+  { name: "Django", icon: django },
+  { name: "React", icon: reactjs },
+  { name: "Git", icon: git },
+  { name: "MySQL", icon: mysql },
+  { name: "C", icon: c },
 ] as const;
 
 // Experiences
 export const EXPERIENCES = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Engineer Intern",
+    company_name: "Yuga Yatra Retail (OPC) Pvt. Ltd.",
+    icon: backend,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Mar 2026 – Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Gaining hands-on experience in developing websites and applications using Cursor AI, Firebase Studio, and modern AI-powered development tools.",
+      "Working on integrating AI technologies into software workflows.",
+      "Designing UI assets, product creatives, and visual components using Canva.",
+      "Managing seller portals for Amazon and Flipkart.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Java Programming Intern",
+    company_name: "InternPe",
+    icon: backend,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "25th August 2025 – 21st September 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Gained hands-on experience in Java programming and problem-solving.",
+      "Developed multiple Java projects during the internship period.",
+      "Strengthened technical skills through practical project development.",
+      "Collaborated with team members on software development tasks.",
     ],
   },
 ] as const;
 
 // Testimonials
-export const TESTIMONIALS = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: user1,
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: user2,
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: user3,
-  },
-] as const;
+export const TESTIMONIALS = [] as const;
 
 // Projects
 export const PROJECTS = [
   {
-    name: "Disney+ Clone",
+    name: "Artisan Market Place",
     description:
-      "Disney+ is one of the biggest streaming platforms used by millions of people world-wide and allows us to stream high quality content in 4k and various other formats",
+      "A secure web marketplace for artisans to showcase and sell handcrafted products online. The platform includes admin approval for newly added products, ensuring authenticity and quality. Customers can browse approved items, add to cart, and place orders.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "firebase",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "JavaScript",
         color: "pink-text-gradient",
       },
-    ],
-    image: project1,
-    source_code_link: "https://github.com/sanidhyy/disney-clone",
-    live_site_link: "https://clonedisneyplus.web.app",
-  },
-  {
-    name: "Golds Gym",
-    description:
-      "Web application that enables users to search for fitness exercises, effective personalized positions, and recommends new exercises based on their personal preferences.",
-    tags: [
       {
-        name: "react",
+        name: "Bootstrap",
         color: "blue-text-gradient",
       },
       {
-        name: "rapidapi",
+        name: "Django",
         color: "green-text-gradient",
       },
       {
-        name: "tailwindcss",
+        name: "SQLite",
         color: "pink-text-gradient",
       },
     ],
-    image: project2,
-    source_code_link: "https://github.com/sanidhyy/fitness-app",
-    live_site_link: "https://fitness-gym-react.netlify.app",
-  },
-  {
-    name: "Shoppy",
-    description:
-      "The most personalised admin dashboard web application that allows enables users to choose customized themes and dark mode with different pages and variety of charts.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "syncfusion",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project3,
-    source_code_link: "https://github.com/sanidhyy/admin-dashboard",
-    live_site_link: "https://shoppy-dashboard-react.netlify.app",
-  },
-  {
-    name: "TikTok Clone",
-    description:
-      "A Next JS Web Application that enables users to upload videos of any length and size, create accounts and connect with other people just like any other social media.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project4,
-    source_code_link: "https://github.com/sanidhyy/tiktok-clone",
-    live_site_link: "https://tiktok-clone-react.vercel.app",
-  },
-  {
-    name: "Cryptoverse",
-    description:
-      "Best Cryptocurrency web application that allows users to view price, market cap and daily change in realtime for almost every cryptocurrency in the world.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project5,
-    source_code_link: "https://github.com/sanidhyy/crypto-app",
-    live_site_link: "https://reactjscryptoapp.netlify.app",
-  },
-  {
-    name: "Travel Advisor",
-    description:
-      "Web application that enables you to view your nearby restaurants, hotels and attractions which can be sorted by ratings, price and much more.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material-ui",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project6,
-    source_code_link: "https://github.com/sanidhyy/travel-advisor",
-    live_site_link: "https://travel-advisor-reactjs.netlify.app",
+    image: projectImage,
+    source_code_link: "https://github.com/SHRAMAJEEVI/Artisan._.Market._.place",
+    live_site_link: "https://artisan-market-place.onrender.com/",
   },
 ] as const;
 
 export const SOCIALS = [
   {
-    name: "YouTube",
-    icon: youtube,
-    link: "https://www.youtube.com",
-  },
-  {
-    name: "Linkedin",
-    icon: linkedin,
-    link: "https://www.linkedin.com/in/sanidhyy",
-  },
-  {
-    name: "Twitter",
-    icon: twitter,
-    link: "https://x.com/_sanidhyy",
-  },
-  {
     name: "GitHub",
-    icon: github,
-    link: "https://github.com/sanidhyy",
+    icon: FaGithub,
+    link: "https://github.com/SHRAMAJEEVI",
+  },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/manikant-mahesh-bankoller-490b8b294/",
+  },
+  {
+    name: "LeetCode",
+    icon: SiLeetcode,
+    link: "https://leetcode.com/u/Manikant07/",
+  },
+  {
+    name: "HackerRank",
+    icon: SiHackerrank,
+    link: "https://www.hackerrank.com/profile/bankollermanika1",
   },
 ] as const;

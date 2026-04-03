@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {
   About,
-  Contact,
+  Education,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
+  SimpleContact,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
 import Banner from "./components/banner";
 import Footer from "./components/footer";
+import CertificationsPage from "./pages/CertificationsPage";
 
 // App
 const App = () => {
@@ -22,22 +22,24 @@ const App = () => {
     <BrowserRouter>
       <Banner hide={hide} setHide={setHide} />
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar hide={hide} />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Feedbacks />
-
-        {/* Contact */}
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-        <Footer />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar hide={hide} />
+                <Hero />
+              </div>
+              <About />
+              <Experience />
+              <Education />
+              <Tech />
+              <Works />
+              <SimpleContact />
+              <Footer />
+            </>
+          } />
+          <Route path="/certifications" element={<CertificationsPage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

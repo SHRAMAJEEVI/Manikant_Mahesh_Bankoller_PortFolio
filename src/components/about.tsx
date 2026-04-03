@@ -54,11 +54,11 @@ export const About = () => {
           variants={fadeIn(undefined, undefined, 0.1, 1)}
           className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          I'm a skilled website developer with experience in TypeScript and
-          Javascript, and expertise in frameworks like React, Node.js, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+          I'm a Computer Science Engineering student at Sri Siddhartha Institute of Technology with a CGPA of 9.05. 
+          I have hands-on experience in developing websites and applications using modern AI-powered development tools, 
+          Firebase, and web technologies. I'm passionate about integrating AI technologies into software workflows and 
+          creating efficient, user-friendly solutions. Currently working as a Software Engineer Intern at Yuga Yatra Retail, 
+          gaining practical experience in full-stack development.
         </motion.p>
 
         {/* Service Card */}

@@ -32,45 +32,52 @@ export const Contact = () => {
     // form fields
     const { name, email, message } = form;
 
+    // Clear previous errors
+    const nameError = document.querySelector("#name-error");
+    const emailError = document.querySelector("#email-error");
+    const messageError = document.querySelector("#message-error");
+    
+    if (nameError) nameError.classList.add("hidden");
+    if (emailError) emailError.classList.add("hidden");
+    if (messageError) messageError.classList.add("hidden");
+
     type Current = {
       name: boolean;
       email: boolean;
       message: boolean;
     };
-
-    // Error message
-    const nameError = document.querySelector("#name-error")!;
-    const emailError = document.querySelector("#email-error")!;
-    const messageError = document.querySelector("#message-error")!;
     const current: Current = { name: false, email: false, message: false };
 
     // validate name
-    if (name.trim().length < 3) {
-      nameError.classList.remove("hidden");
+    if (!name || name.trim().length < 3) {
+      if (nameError) nameError.classList.remove("hidden");
       current["name"] = false;
+      return false;
     } else {
-      nameError.classList.add("hidden");
+      if (nameError) nameError.classList.add("hidden");
       current["name"] = true;
     }
 
     const email_regex =
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@\"]+([^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // valiate email
-    if (!email.trim().toLowerCase().match(email_regex)) {
-      emailError.classList.remove("hidden");
+    // validate email
+    if (!email || !email.trim().toLowerCase().match(email_regex)) {
+      if (emailError) emailError.classList.remove("hidden");
       current["email"] = false;
+      return false;
     } else {
-      emailError.classList.add("hidden");
+      if (emailError) emailError.classList.add("hidden");
       current["email"] = true;
     }
 
     // validate message
-    if (message.trim().length < 5) {
-      messageError.classList.remove("hidden");
+    if (!message || message.trim().length < 5) {
+      if (messageError) messageError.classList.remove("hidden");
       current["message"] = false;
+      return false;
     } else {
-      messageError.classList.add("hidden");
+      if (messageError) messageError.classList.add("hidden");
       current["message"] = true;
     }
 
@@ -86,39 +93,65 @@ export const Contact = () => {
     e.preventDefault();
 
     // validate form
-    if (!validateForm()) return false;
+    const isValid = validateForm();
+    if (!isValid) {
+      toast.error("Please fill all fields correctly.");
+      return;
+    }
 
-    // show loader
-    setLoading(true);
+    // Check if all fields have content (basic validation)
+    const { name, email, message } = form;
+    if (name.trim() && email.trim() && message.trim()) {
+      // show loader
+      setLoading(true);
 
-    // send email
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Shubham",
-          from_email: form.email.trim().toLowerCase(),
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
-      )
-      .then(() => toast.success("Thanks for contacting me."))
-      .catch((error) => {
-        // Error handle
-        console.log("[CONTACT_ERROR]: ", error);
-        toast.error("Something went wrong.");
-      })
-      .finally(() => {
-        setLoading(false);
-        setForm({
-          name: "",
-          email: "",
-          message: "",
+      // send email
+      emailjs
+        .send(
+          import.meta.env.VITE_APP_SERVICE_ID,
+          import.meta.env.VITE_APP_TEMPLATE_ID,
+          {
+            from_name: form.name,
+            to_name: "Manikant Mahesh Bankoller",
+            from_email: form.email.trim().toLowerCase(),
+            to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+            message: form.message,
+          },
+          import.meta.env.VITE_APP_EMAILJS_KEY,
+        )
+        .then(() => {
+          toast.success("Message sent successfully!");
+          console.log("Email sent successfully");
+          // Clear form
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        })
+        .catch((error) => {
+          // Error handle
+          console.log("[CONTACT_ERROR]: ", error);
+          
+          // Show specific error message
+          if (error.text === "Too many requests.") {
+            toast.error("Too many requests. Please try again later.");
+          } else if (error.text === "First name is required.") {
+            toast.error("Please enter your name.");
+          } else if (error.text === "Email address is required.") {
+            toast.error("Please enter a valid email address.");
+          } else if (error.text === "Message is required.") {
+            toast.error("Please enter a message.");
+          } else {
+            toast.error("Failed to send message. Please try again.");
+          }
+        })
+        .finally(() => {
+          setLoading(false);
         });
-      });
+    } else {
+      toast.error("Please fill all fields before sending.");
+    }
   };
 
   return (

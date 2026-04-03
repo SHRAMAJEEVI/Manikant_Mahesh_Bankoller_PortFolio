@@ -25,7 +25,7 @@ const FeedbackCard = ({
   image,
 }: FeedbackCardProps) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
+    variants={fadeIn("left", "spring", index * 0.5, 0.75)}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
     {/* Quote " */}
@@ -79,9 +79,13 @@ export const Feedbacks = () => {
         <div
           className={cn(styles.paddingX, "-mt-20 pb-14 flex flex-wrap gap-7")}
         >
-          {TESTIMONIALS.map((testimonial, i) => (
+          {TESTIMONIALS.length > 0 ? TESTIMONIALS.map((testimonial: any, i: number) => (
             <FeedbackCard key={testimonial.name} index={i} {...testimonial} />
-          ))}
+          )) : (
+            <div className="text-white text-center text-lg">
+              <p>Testimonials section coming soon!</p>
+            </div>
+          )}
         </div>
       </div>
     </SectionWrapper>
