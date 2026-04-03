@@ -65,7 +65,7 @@ export const NAV_LINKS = [
   {
     id: "source-code",
     title: "Source Code",
-    link: "http://www.github.com/SHRAMAJEEVI/3d-portfolio",
+    link: "https://github.com/SHRAMAJEEVI/Manikant_Mahesh_Bankoller_PortFolio",
   },
 ] as const;
 
