@@ -52,7 +52,7 @@ const AsteroidsBackground = () => {
           (Math.random() - 0.5) * 15  // Increased depth
         ] as [number, number, number],
         speed: Math.random() * 2 + 0.5, // Increased speed variation
-        size: Math.random() * 0.4 + 0.2 // Increased size: 0.2 to 0.6
+        size: Math.random() * 0.2 + 0.1 // Smaller size: 0.1 to 0.3
       });
     }
     return asteroidArray;

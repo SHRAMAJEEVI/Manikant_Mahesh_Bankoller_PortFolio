@@ -26,6 +26,8 @@ import {
   creator,
   web,
   project1,
+  project2,
+  project3,
   projectImage,
   html,
   css,

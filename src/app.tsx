@@ -4,6 +4,7 @@ import {
   About, 
   Education, 
   Experience, 
+  FrontendWebsites,
   Hero, 
   Navbar, 
   SimpleContact, 
@@ -36,6 +37,7 @@ const App = () => {
                 <Education />
                 <Tech />
                 <Works />
+                <FrontendWebsites />
                 <SimpleContact />
                 <Footer />
               </AsteroidsBackground>

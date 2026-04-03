@@ -13,6 +13,7 @@ import { Contact } from "./contact";
 import { SimpleContact } from "./simple-contact";
 import { Education } from "./education";
 import { Experience } from "./experience";
+import { FrontendWebsites } from "./frontend-websites";
 import Footer from "./footer";
 import { Hero } from "./hero";
 import { Navbar } from "./navbar";
@@ -28,6 +29,7 @@ export {
   EarthCanvas,
   Education,
   Experience,
+  FrontendWebsites,
   Footer,
   Hero,
   Navbar,
