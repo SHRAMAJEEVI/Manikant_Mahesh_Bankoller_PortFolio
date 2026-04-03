@@ -66,6 +66,7 @@ import unstopCertificate from "./Unstop.jpeg";
 import codebizzCertificate from "./CodeBizz 2026.jpeg";
 import pythonProgrammingCertificate from "./Python Programming.jpeg";
 import careerVaultCertificate from "./CareerVault.jpeg";
+import resume from "./Manikant_Mahesh_Bankoller_Resume.pdf";
 
 import user1 from "./testimonials/user1.jpg";
 import user2 from "./testimonials/user2.jpg";
@@ -138,6 +139,7 @@ export {
   codebizzCertificate,
   pythonProgrammingCertificate,
   careerVaultCertificate,
+  resume,
   user1,
   user2,
   user3,

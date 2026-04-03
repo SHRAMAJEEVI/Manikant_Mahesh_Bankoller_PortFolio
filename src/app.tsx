@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import {
-  About,
-  Education,
-  Experience,
-  Hero,
-  Navbar,
-  SimpleContact,
-  Tech,
-  Works,
+import { 
+  About, 
+  Education, 
+  Experience, 
+  Hero, 
+  Navbar, 
+  SimpleContact, 
+  Tech, 
+  Works, 
+  Footer,
+  AsteroidsBackground
 } from "./components";
 import Banner from "./components/banner";
-import Footer from "./components/footer";
 import CertificationsPage from "./pages/CertificationsPage";
 
 // App
@@ -25,17 +26,22 @@ const App = () => {
         <Routes>
           <Route path="/" element={
             <>
+              {/* Hero Section - No Asteroids Background */}
               <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                 <Navbar hide={hide} />
                 <Hero />
               </div>
-              <About />
-              <Experience />
-              <Education />
-              <Tech />
-              <Works />
-              <SimpleContact />
-              <Footer />
+              
+              {/* All Other Sections - With Asteroids Background */}
+              <AsteroidsBackground>
+                <About />
+                <Experience />
+                <Education />
+                <Tech />
+                <Works />
+                <SimpleContact />
+                <Footer />
+              </AsteroidsBackground>
             </>
           } />
           <Route path="/certifications" element={<CertificationsPage />} />

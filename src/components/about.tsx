@@ -52,11 +52,11 @@ export const About = () => {
         {/* Body */}
         <motion.p
           variants={fadeIn(undefined, undefined, 0.1, 1)}
-          className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           I'm a Computer Science Engineering student at Sri Siddhartha Institute of Technology with a CGPA of 9.05. 
           I have hands-on experience in developing websites and applications using modern AI-powered development tools, 
-          Firebase, and web technologies. I'm passionate about integrating AI technologies into software workflows and 
+          and web technologies. I'm passionate about integrating AI technologies into software workflows and 
           creating efficient, user-friendly solutions. Currently working as a Software Engineer Intern at Yuga Yatra Retail, 
           gaining practical experience in full-stack development.
         </motion.p>
