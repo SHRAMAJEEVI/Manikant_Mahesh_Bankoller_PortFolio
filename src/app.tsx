@@ -11,10 +11,10 @@ import {
   Tech, 
   Works, 
   Footer,
-  AsteroidsBackground
+  AsteroidsBackground,
+  Certifications
 } from "./components";
 import Banner from "./components/banner";
-import CertificationsPage from "./pages/CertificationsPage";
 
 // App
 const App = () => {
@@ -38,12 +38,12 @@ const App = () => {
                 <Tech />
                 <Works />
                 <FrontendWebsites />
+                <Certifications />
                 <SimpleContact />
                 <Footer />
               </AsteroidsBackground>
             </>
           } />
-          <Route path="/certifications" element={<CertificationsPage />} />
         </Routes>
       </div>
     </BrowserRouter>

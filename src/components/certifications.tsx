@@ -1,4 +1,3 @@
-import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import { motion } from "framer-motion";
@@ -16,7 +15,8 @@ import {
   unstopCertificate,
   codebizzCertificate,
   pythonProgrammingCertificate,
-  careerVaultCertificate
+  careerVaultCertificate,
+  nptelCertificate
 } from "../assets";
 
 // Certificate type definition
@@ -144,94 +144,105 @@ export const Certifications = () => {
       certificateId: "CAREER-2025-001",
       image: careerVaultCertificate,
     },
+    {
+      title: "Elite NPTEL Certification – Cloud Computing",
+      issuer: "IIT Kharagpur via NPTEL",
+      date: "2025",
+      description: "Successfully completed the Cloud Computing course offered by IIT Kharagpur through NPTEL, earning an Elite Certification with a 76% score and ranking in the Top 5%.",
+      certificateId: "NPTEL-CLOUD-2025-001",
+      image: nptelCertificate,
+    },
   ];
 
   return (
-    <SectionWrapper>
-      <div className="flex flex-col items-center">
-        <motion.div
-          variants={slideIn("up", "tween", 0.2, 1)}
-          className="w-full max-w-6xl"
-        >
-          <h2 className={styles.sectionHeadText}>Certifications</h2>
-          <p className={styles.sectionSubText}>Professional Certificates & Achievements</p>
-          
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certificationsData.map((cert, index) => (
-              <motion.div
-                key={index}
-                variants={slideIn("up", "tween", 0.2 + index * 0.1, 1)}
-                className="bg-black-100 p-6 rounded-2xl border border-gray-700 hover:border-cyan-400 transition-all duration-300"
-              >
-                <div className="flex flex-col h-full">
-                  {/* Certificate Image */}
-                  {cert.image && (
-                    <div className="mb-4">
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        className="w-full h-48 object-cover rounded-lg"
-                      />
-                    </div>
-                  )}
-                  
-                  {/* Certificate Header */}
+    <div className="flex flex-col items-center">
+      <motion.div
+        variants={slideIn("up", "tween", 0.2, 1)}
+        initial="hidden"
+        animate="show"
+        className="w-full max-w-6xl"
+      >
+        <h2 className={styles.sectionHeadText}>Certifications</h2>
+        <p className={styles.sectionSubText}>Professional Certificates & Achievements</p>
+        
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {certificationsData.map((cert, index) => (
+            <motion.div
+              key={index}
+              variants={slideIn("up", "tween", 0.2 + index * 0.1, 1)}
+              initial="hidden"
+              animate="show"
+              className="bg-black-100 p-6 rounded-2xl border border-gray-700 hover:border-cyan-400 transition-all duration-300"
+            >
+              <div className="flex flex-col h-full">
+                {/* Certificate Image */}
+                {cert.image && (
                   <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-white text-lg font-bold">
-                        {cert.title}
-                      </h3>
-                      <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <p className="text-cyan-400 text-sm font-medium">
-                      {cert.issuer}
-                    </p>
-                    <p className="text-gray-400 text-xs">
-                      {cert.date}
-                    </p>
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-48 object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                      onClick={() => window.open(cert.image, '_blank')}
+                    />
                   </div>
-                  
-                  {/* Certificate Description */}
-                  <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                    {cert.description}
-                  </p>
-                  
-                  {/* Certificate Footer */}
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-xs">
-                        ID: {cert.certificateId}
-                      </span>
-                      {cert.image && (
-                        <button 
-                          onClick={() => window.open(cert.image, '_blank')}
-                          className="text-cyan-400 text-xs hover:text-cyan-300 transition-colors"
-                        >
-                          View Certificate
-                        </button>
-                      )}
+                )}
+                
+                {/* Certificate Header */}
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-white text-lg font-bold">
+                      {cert.title}
+                    </h3>
+                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
                     </div>
+                  </div>
+                  <p className="text-cyan-400 text-sm font-medium">
+                    {cert.issuer}
+                  </p>
+                  <p className="text-gray-400 text-xs">
+                    {cert.date}
+                  </p>
+                </div>
+                
+                {/* Certificate Description */}
+                <p className="text-gray-300 text-sm leading-relaxed flex-grow">
+                  {cert.description}
+                </p>
+                
+                {/* Certificate Footer */}
+                <div className="mt-4 pt-4 border-t border-gray-700">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">
+                      ID: {cert.certificateId}
+                    </span>
+                    {cert.image && (
+                      <button 
+                        onClick={() => window.open(cert.image, '_blank')}
+                        className="text-cyan-400 text-xs hover:text-cyan-300 transition-colors"
+                      >
+                        View Certificate
+                      </button>
+                    )}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </SectionWrapper>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   );
 };

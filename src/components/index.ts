@@ -9,6 +9,7 @@ import {
   StarsCanvas,
   AsteroidsCanvas,
 } from "./canvas";
+import { Certifications } from "./certifications";
 import { Contact } from "./contact";
 import { SimpleContact } from "./simple-contact";
 import { Education } from "./education";
@@ -38,4 +39,5 @@ export {
   Tech,
   Works,
   AsteroidsBackground,
+  Certifications,
 };

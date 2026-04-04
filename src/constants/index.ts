@@ -60,11 +60,6 @@ export const NAV_LINKS = [
     link: null,
   },
   {
-    id: "certifications",
-    title: "Certifications",
-    link: "/certifications",
-  },
-  {
     id: "source-code",
     title: "Source Code",
     link: "https://github.com/SHRAMAJEEVI/Manikant_Mahesh_Bankoller_PortFolio",
