@@ -67,6 +67,9 @@ import codebizzCertificate from "./CodeBizz 2026.jpeg";
 import pythonProgrammingCertificate from "./Python Programming.jpeg";
 import careerVaultCertificate from "./CareerVault.jpeg";
 import nptelCertificate from "./NPTEL.jpeg";
+import iotNptelCertificate from "./IOT_NPTEL.jpeg";
+import thinkathonCertificate from "./Thinkathon.jpeg";
+import yugaYatraCertificate from "./Yuga_Yatra.jpeg";
 import resume from "./Manikant_Mahesh_Bankoller_Resume.pdf";
 
 import user1 from "./testimonials/user1.jpg";
@@ -141,6 +144,9 @@ export {
   pythonProgrammingCertificate,
   careerVaultCertificate,
   nptelCertificate,
+  iotNptelCertificate,
+  thinkathonCertificate,
+  yugaYatraCertificate,
   resume,
   user1,
   user2,

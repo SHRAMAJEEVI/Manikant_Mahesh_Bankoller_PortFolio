@@ -95,7 +95,7 @@ export const EXPERIENCES = [
     company_name: "Yuga Yatra Retail (OPC) Pvt. Ltd.",
     icon: backend,
     iconBg: "#E6DEDD",
-    date: "Mar 2026 – Present",
+    date: "Mar 2026-May 2026",
     points: [
       "Gaining hands-on experience in developing websites and applications using Cursor AI, Firebase Studio, and modern AI-powered development tools.",
       "Working on integrating AI technologies into software workflows.",

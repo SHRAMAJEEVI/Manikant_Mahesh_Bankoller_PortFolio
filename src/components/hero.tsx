@@ -27,7 +27,7 @@ export const Hero = () => {
           </h1>
           <p className={cn(styles.heroSubText, "mt-2 text-white-100")}>
             Computer Science Engineering Student <br className="sm:block hidden" />
-            Developing web application
+            Developing web applications.
           </p>
         </div>
       </div>

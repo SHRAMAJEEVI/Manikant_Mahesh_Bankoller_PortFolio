@@ -16,7 +16,10 @@ import {
   codebizzCertificate,
   pythonProgrammingCertificate,
   careerVaultCertificate,
-  nptelCertificate
+  nptelCertificate,
+  iotNptelCertificate,
+  thinkathonCertificate,
+  yugaYatraCertificate,
 } from "../assets";
 
 // Certificate type definition
@@ -151,6 +154,30 @@ export const Certifications = () => {
       description: "Successfully completed the Cloud Computing course offered by IIT Kharagpur through NPTEL, earning an Elite Certification with a 76% score and ranking in the Top 5%.",
       certificateId: "NPTEL-CLOUD-2025-001",
       image: nptelCertificate,
+    },
+    {
+      title: "Elite NPTEL Certification – Industry 4.0 & IIoT",
+      issuer: "IIT Kharagpur via NPTEL",
+      date: "Jan–Apr 2026",
+      description: "Successfully completed Introduction to Industry 4.0 and Industrial Internet of Things offered by IIT Kharagpur through NPTEL, earning Elite certification with an 80% consolidated score.",
+      certificateId: "NPTEL26CS38S1652400246",
+      image: iotNptelCertificate,
+    },
+    {
+      title: "Thinkathon-2025",
+      issuer: "Sri Siddhartha Institute of Technology",
+      date: "November 2025",
+      description: "Participated in THINKATHON-2025, an inter-college technical competition organized by the Department of Computer Science and Engineering at SSIT.",
+      certificateId: "THINK-2025-001",
+      image: thinkathonCertificate,
+    },
+    {
+      title: "Certificate of Internship",
+      issuer: "Yuga Yatra Retail (OPC) Private Limited",
+      date: "March – May 2026",
+      description: "Completed a Software Developer Internship at Yuga Yatra Retail, contributing to development projects and gaining hands-on industry experience.",
+      certificateId: "280400702",
+      image: yugaYatraCertificate,
     },
   ];
 
